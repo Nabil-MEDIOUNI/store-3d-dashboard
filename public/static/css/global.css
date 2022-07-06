@@ -1,0 +1,351 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+iframe {
+  pointer-events: none;
+}
+
+#app-site {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.loader {
+  position: relative;
+  margin: 0 auto;
+  width: 60px;
+  height: 100vh;
+
+  display: flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+
+  flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
+.loading {
+  width: 120px;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  position: absolute;
+}
+
+.loading {
+  padding: 10px;
+  font-weight: 900;
+  font-size: 3em;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.content {
+  padding-top: 10px;
+  transform: translate3d(200%, 0, 0);
+  text-align: right;
+}
+
+.content::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 190px;
+  transform: translate3d(-120px, 0, 0);
+  height: 1px;
+  background: white;
+  border-radius: 3px;
+}
+.curser {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  height: 100vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+.picker {
+  width: 150px !important;
+  height: 90px !important;
+  z-index: 40 !important;
+}
+
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 0.5em;
+  width: 0.5em;
+  overflow: show;
+  margin: auto;
+  bottom: 1rem;
+  right: 1rem;
+}
+.loading1 {
+  position: fixed;
+  z-index: 998;
+  height: 100%;
+  width: 100%;
+  overflow: show;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+}
+
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loading:not(:required) {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.loading1:not(:required) {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 7px;
+  width: 1em;
+  height: 1em;
+  animation: spinner 150ms infinite linear;
+  -moz-animation: spinner 150ms infinite linear;
+  -ms-animation: spinner 150ms infinite linear;
+  -o-animation: spinner 150ms infinite linear;
+  animation: spinner 150ms infinite linear;
+  border-radius: 0.5em;
+  box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0,
+    rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 0.75) 0 1.5em 0 0,
+    rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 0.75) -1.5em 0 0 0,
+    rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0,
+    rgba(255, 255, 255, 0.75) 0 -1.5em 0 0,
+    rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0,
+    rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 0.75) 0 1.5em 0 0,
+    rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 0.75) -1.5em 0 0 0,
+    rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0,
+    rgba(255, 255, 255, 0.75) 0 -1.5em 0 0,
+    rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.bar-c {
+  display: box;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  height: 30px;
+  width: 40px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 1rem;
+  right: 4rem;
+  cursor: pointer;
+}
+
+.bar {
+  height: 1px;
+  width: 3px;
+  display: inline-block;
+  background-color: #ffffd2;
+  margin-left: 1px;
+  border-radius: 3px;
+  animation-duration: 500ms;
+  animation-play-state: running;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.bar.noAnim {
+  animation: none;
+  animation-name: none;
+}
+
+.bar#bar-1 {
+  animation-name: danceHeight1;
+  animation-delay: 0ms;
+}
+
+.bar#bar-2 {
+  animation-name: danceHeight2;
+  animation-delay: 300ms;
+}
+
+.bar#bar-3 {
+  animation-name: danceHeight3;
+  animation-delay: 600ms;
+}
+
+.bar#bar-4 {
+  animation-name: danceHeight4;
+  animation-delay: 900ms;
+}
+
+.bar#bar-5 {
+  animation-name: danceHeight5;
+  animation-delay: 1200ms;
+}
+
+.bar#bar-6 {
+  animation-name: danceHeight6;
+  animation-delay: 1500ms;
+}
+
+@keyframes danceHeight1 {
+  from {
+    height: 1px;
+  }
+  to {
+    height: 22px;
+  }
+}
+
+@keyframes danceHeight2 {
+  from {
+    height: 1px;
+  }
+  to {
+    height: 15px;
+  }
+}
+
+@keyframes danceHeight3 {
+  from {
+    height: 1px;
+  }
+  to {
+    height: 30px;
+  }
+}
+
+@keyframes danceHeight4 {
+  from {
+    height: 1px;
+  }
+  to {
+    height: 20px;
+  }
+}
+
+@keyframes danceHeight5 {
+  from {
+    height: 1px;
+  }
+  to {
+    height: 15px;
+  }
+}
+
+@keyframes danceHeight6 {
+  from {
+    height: 1px;
+  }
+  to {
+    height: 15px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

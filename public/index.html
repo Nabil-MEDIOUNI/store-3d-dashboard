@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="icon" type="image/png" href="./static/icons/favicon.png" />
+  <link rel="apple-touch-icon" href="./static/icons/favicon.png" />
+  <meta name="description"
+    content="The platform mainly focuses on the use of 3D in the web in the context of the industry of the future, and more particularly on its use in the recovery of sensor data on industrial systems." />
+  <link rel="stylesheet" href="./static/css/global.css" />
+  <link rel="stylesheet" href="./static/css/tailwind.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/draft-js/0.7.0/Draft.min.css" />
+  <link rel="stylesheet" href="./static/icons/ionicons/css/ionicons.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: '35dd9083-8523-4adc-a37b-c080e05d30c8',
+        notifyButton: {
+          enable: false,
+        },
+      });
+    });
+
+    OneSignal.push(function () {
+      OneSignal.getUserId(function (userId) {
+        localStorage.setItem('os-user', userId);
+      });
+    });
+
+  </script>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places,geometry,drawing&key=AIzaSyA72EHVeUE3qZ4eG6BnHgxgfIWH48dTEDA">
+  </script>
+
+  <title>Store 3D - Dashboard</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    window.scrollTo(0, 1);
+    AOS.init();
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src="./static/js/jquery.js"></script>
+<script src="./static/js/pageNotFound.js"></script>
+<script src="./static/js/global.js"></script>
+
+</html>

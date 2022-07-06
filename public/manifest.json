@@ -1,0 +1,16 @@
+{
+  "short_name": "3D Store",
+  "name": "3D Store",
+  "icons": [
+    {
+      "src": "/static/img/logo_1024x1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
